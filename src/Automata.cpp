@@ -63,7 +63,6 @@ void Automata::choice(int index) {
 
     if (check(index)) {
         state = COOKING;
-        cook();
     }
 }
 
@@ -74,7 +73,7 @@ void Automata::cook() {
 }
 
 void Automata::finish() {
-    if (state == FINISHED) {
+    if (state == FINISHED || state == COOKING) {
         cash = 0;
         state = WAITING_FOR_COIN;
     }
