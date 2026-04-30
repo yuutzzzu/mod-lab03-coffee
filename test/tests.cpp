@@ -68,6 +68,7 @@ TEST(AutomataTest, CookAndFinish) {
     a.coin(2.0);
     a.choice(1);
     EXPECT_EQ(a.getState(), COOKING);
+    a.cook();  // Добавляем явный вызов cook()
     EXPECT_EQ(a.getState(), FINISHED);
     a.finish();
     EXPECT_EQ(a.getState(), WAITING_FOR_COIN);
