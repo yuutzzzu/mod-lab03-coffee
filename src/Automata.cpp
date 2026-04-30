@@ -23,7 +23,8 @@ void Automata::off() {
 }
 
 void Automata::coin(double amount) {
-    if (amount > 0 && (state == WAITING_FOR_COIN || state == WAITING_FOR_CHOICE)) {
+    if (amount > 0 && (state == WAITING_FOR_COIN ||
+                       state == WAITING_FOR_CHOICE)) {
         cash += amount;
         if (state == WAITING_FOR_COIN) {
             state = WAITING_FOR_CHOICE;
