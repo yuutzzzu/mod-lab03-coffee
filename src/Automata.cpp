@@ -63,7 +63,6 @@ void Automata::choice(int index) {
 
     if (check(index)) {
         state = COOKING;
-        cook();
     }
 }
 
