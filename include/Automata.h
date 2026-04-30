@@ -15,13 +15,13 @@ enum STATES {
 };
 
 class Automata {
-private:
+ private:
     double cash;
     std::vector<std::string> menu;
     std::vector<double> prices;
     STATES state;
 
-public:
+ public:
     Automata();
 
     void on();
